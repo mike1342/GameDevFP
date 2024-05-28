@@ -23,7 +23,7 @@ public class ZombieController : MonoBehaviour
     void Update()
     {
         Vector3 playerVelocity = player.GetComponent<CharacterController>().velocity;
-        if (playerVelocity.magnitude < 0.001) {
+        if (playerVelocity.magnitude > 0.001) {
             Vector3 distance = player.position - transform.position;
             playerSpotted = distance.magnitude < sightDist;
             if (playerSpotted) {
