@@ -1723,7 +1723,7 @@ GameObject:
   - component: {fileID: 9530762}
   m_Layer: 0
   m_Name: SA_Zombie_Prisoner
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

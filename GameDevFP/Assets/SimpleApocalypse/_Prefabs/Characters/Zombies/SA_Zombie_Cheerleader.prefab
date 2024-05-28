@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 9583428}
   m_Layer: 0
   m_Name: SA_Zombie_Cheerleader
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
