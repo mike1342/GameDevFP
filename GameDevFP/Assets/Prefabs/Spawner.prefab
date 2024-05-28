@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 165266, guid: 1e2e55f2b72bd944baa992df728abe80, type: 3}
-  numToSpawn: 30
-  timeBetweenSpawns: 0.1
+  numToSpawn: 3
+  timeBetweenSpawns: 2
   xMin: -10
   xMax: 10
   yMin: 0
