@@ -9,7 +9,7 @@ public class ZombieController : MonoBehaviour
     Animator animator;
     Transform player;
     public float moveSpeed = 0.3f;
-    public float damageAmount = 5;
+    public float dps = 5;
     public float sightDist = 10;
     bool playerSpotted = false;
 
@@ -47,7 +47,8 @@ public class ZombieController : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit) {
         if (hit.gameObject.CompareTag("Player")) {
-            
+            var playerHealth = hit.gameObject.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(dps);
         } 
     }
 }
