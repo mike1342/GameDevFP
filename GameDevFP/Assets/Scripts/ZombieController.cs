@@ -6,6 +6,7 @@ public class ZombieController : MonoBehaviour
 {
 
     CharacterController controller;
+    Animator animator;
     Transform player;
     public float moveSpeed = 0.3f;
     public float damageAmount = 5;
@@ -16,6 +17,7 @@ public class ZombieController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -27,6 +29,7 @@ public class ZombieController : MonoBehaviour
             Vector3 distance = player.position - transform.position;
             playerSpotted = distance.magnitude < sightDist;
             if (playerSpotted) {
+                animator.SetTrigger("PlayerSpotted");
                 Vector3 horzPos = player.position;
                 horzPos.y = transform.position.y;
                 transform.LookAt(horzPos);
@@ -36,13 +39,15 @@ public class ZombieController : MonoBehaviour
                 moveVector = moveVector.normalized * moveSpeed;
 
                 controller.Move(moveVector * Time.deltaTime);
+            } else {
+                animator.SetTrigger("PlayerUnspotted");
             }
         }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit) {
         if (hit.gameObject.CompareTag("Player")) {
-            //Do damage
+            
         } 
     }
 }
