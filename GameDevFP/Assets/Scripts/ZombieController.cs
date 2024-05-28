@@ -8,9 +8,10 @@ public class ZombieController : MonoBehaviour
     CharacterController controller;
     Animator animator;
     Transform player;
-    public float moveSpeed = 0.3f;
+    public float moveSpeed = 10f;
     public float dps = 5;
-    public float sightDist = 10;
+    public float sightDist = 100;
+    public float gravity = 9.81f;
     bool playerSpotted = false;
 
     // Start is called before the first frame update
@@ -37,12 +38,23 @@ public class ZombieController : MonoBehaviour
                 Vector3 moveVector = distance;
                 moveVector.y = 0;
                 moveVector = moveVector.normalized * moveSpeed;
-
                 controller.Move(moveVector * Time.deltaTime);
             } else {
                 animator.SetTrigger("PlayerUnspotted");
             }
         }
+        Vector3 velocity = Vector3.zero;
+        // Apply gravity
+        if (!controller.isGrounded)
+        {
+            velocity.y -= gravity * Time.deltaTime;
+        }
+        else
+        {
+            velocity.y = 0; // Reset the fall velocity when grounded
+        }
+
+        controller.Move(velocity * Time.deltaTime);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit) {
