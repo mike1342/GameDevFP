@@ -6,7 +6,7 @@ public class ZombieSpawner : MonoBehaviour
 {
 
     public GameObject zombiePrefab;
-    public int numToSpawn;
+    public int numToSpawn = 3;
     public float timeBetweenSpawns;
     int numSpawned = 0;
     float timeSinceLastSpawn = 0.0f;
