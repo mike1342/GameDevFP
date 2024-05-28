@@ -39,4 +39,10 @@ public class ZombieController : MonoBehaviour
             }
         }
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit) {
+        if (hit.gameObject.CompareTag("Player")) {
+            //Do damage
+        } 
+    }
 }
