@@ -13,6 +13,7 @@ public class ZombieController : MonoBehaviour, IEnemy
     public float sightDist = 100;
     public float gravity = 9.81f;
     public AudioClip zombieHurt;
+    public AudioClip zombieIdle;
     bool playerSpotted = false;
 
     private float health = 100;
@@ -23,6 +24,7 @@ public class ZombieController : MonoBehaviour, IEnemy
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        InvokeRepeating("ZombieIdleSound", 2.0f, 10.0f);
     }
 
     // Update is called once per frame
@@ -70,10 +72,14 @@ public class ZombieController : MonoBehaviour, IEnemy
     public void Damage(float damage)
     {
         health -= damage;
-        AudioSource.PlayClipAtPoint(zombieHurt, transform.position, 2.0f);
+        AudioSource.PlayClipAtPoint(zombieHurt, transform.position);
         if (health <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    private void ZombieIdleSound() {
+        AudioSource.PlayClipAtPoint(zombieIdle, transform.position);
     }
 }
