@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieController : MonoBehaviour
+public class ZombieController : MonoBehaviour, IEnemy
 {
 
     CharacterController controller;
@@ -13,6 +13,8 @@ public class ZombieController : MonoBehaviour
     public float sightDist = 100;
     public float gravity = 9.81f;
     bool playerSpotted = false;
+
+    private float health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -62,5 +64,14 @@ public class ZombieController : MonoBehaviour
             var playerHealth = hit.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(dps);
         } 
+    }
+
+    public void Damage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
