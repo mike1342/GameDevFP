@@ -21,7 +21,7 @@ public class ZombieSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ZombieController.numEnemies++;
     }
 
     // Update is called once per frame
@@ -29,6 +29,9 @@ public class ZombieSpawner : MonoBehaviour
     {
         if (numSpawned < numToSpawn && timeSinceLastSpawn >= timeBetweenSpawns) {
             spawnZombie();
+        } else if (numSpawned == numToSpawn) {
+            ZombieController.numEnemies--;
+            numSpawned++;
         }
         timeSinceLastSpawn += Time.deltaTime;
     }

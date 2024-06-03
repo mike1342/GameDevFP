@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     void PlayerDies() {
         Debug.Log("Player is dead.");
+        GameObject.FindObjectOfType<LevelManager>().LevelLost();
         gameObject.SetActive(false);
     }
 

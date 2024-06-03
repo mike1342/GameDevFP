@@ -18,12 +18,15 @@ public class ZombieController : MonoBehaviour, IEnemy
 
     private float health = 100;
 
+    public static int numEnemies = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        numEnemies++;
         InvokeRepeating("ZombieIdleSound", 2.0f, 10.0f);
     }
 
@@ -75,6 +78,11 @@ public class ZombieController : MonoBehaviour, IEnemy
         AudioSource.PlayClipAtPoint(zombieHurt, transform.position);
         if (health <= 0)
         {
+            numEnemies--;
+            Debug.Log(numEnemies);
+            if(numEnemies == 0) {
+                GameObject.FindObjectOfType<LevelManager>().LevelBeat();
+            }
             Destroy(gameObject);
         }
     }
