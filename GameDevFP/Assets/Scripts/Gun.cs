@@ -20,6 +20,9 @@ public class Gun : MonoBehaviour
 
         currAmmoText.text = gunData.currentAmmo.ToString();
         unusedAmmoText.text = gunData.unusedAmmo.ToString();
+
+        //FIND A BETTER WAY TO DO THiS
+        gunData.unusedAmmo = 150;
     }
 
     private void Update()
