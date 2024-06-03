@@ -72,7 +72,7 @@ public class Gun : MonoBehaviour
                     IEnemy enemy = hitInfo.transform.GetComponent<IEnemy>();
                     enemy?.Damage(gunData.damage);
                 }
-
+                AudioSource.PlayClipAtPoint(gunData.fireClip, Camera.main.transform.position);
                 gunData.currentAmmo--;
                 currAmmoText.text = gunData.currentAmmo.ToString();
                 timeSinceLastShot = 0f;

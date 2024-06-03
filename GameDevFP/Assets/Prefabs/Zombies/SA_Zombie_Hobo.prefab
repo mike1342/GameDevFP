@@ -2466,6 +2466,7 @@ MonoBehaviour:
   dps: 5
   sightDist: 30
   gravity: 9.81
+  zombieHurt: {fileID: 8300000, guid: b79baf94e750840c4a8674be0fd99b53, type: 3}
 --- !u!1 &168396
 GameObject:
   m_ObjectHideFlags: 0

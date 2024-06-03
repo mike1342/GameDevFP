@@ -12,6 +12,7 @@ public class ZombieController : MonoBehaviour, IEnemy
     public float dps = 5;
     public float sightDist = 100;
     public float gravity = 9.81f;
+    public AudioClip zombieHurt;
     bool playerSpotted = false;
 
     private float health = 100;
@@ -69,6 +70,7 @@ public class ZombieController : MonoBehaviour, IEnemy
     public void Damage(float damage)
     {
         health -= damage;
+        AudioSource.PlayClipAtPoint(zombieHurt, transform.position, 2.0f);
         if (health <= 0)
         {
             Destroy(gameObject);

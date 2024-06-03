@@ -18,5 +18,6 @@ public class GunData : ScriptableObject
     public float reloadTime;
     public bool isReloading;
     public AudioClip reloadClip;
+    public AudioClip fireClip;
 
 }
