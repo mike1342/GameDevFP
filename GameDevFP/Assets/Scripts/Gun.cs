@@ -18,8 +18,8 @@ public class Gun : MonoBehaviour
         currAmmoText.text = gunData.currentAmmo.ToString();
         unusedAmmoText.text = gunData.unusedAmmo.ToString();
 
-        //FIND A BETTER WAY TO DO THiS
-        gunData.unusedAmmo = 150;
+    
+        gunData.unusedAmmo = gunData.magSize * 4;
         gunData.isReloading = false;
     }
 
@@ -95,5 +95,10 @@ public class Gun : MonoBehaviour
     private void GunShot()
     {
         Debug.Log("Gun Shot, ammo: " + gunData.currentAmmo);
+    }
+
+    public void AmmoPickUp()
+    {
+        gunData.unusedAmmo += (gunData.magSize + (gunData.magSize)/2);
     }
 }
