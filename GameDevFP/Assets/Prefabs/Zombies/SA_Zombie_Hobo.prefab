@@ -2462,7 +2462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a676e49f288488e8db19456c0323a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 8
   dps: 5
   sightDist: 50
   gravity: 9.81
