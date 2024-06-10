@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZombieController : MonoBehaviour, IEnemy
 {
-
-    CharacterController controller;
     Animator animator;
     Transform player;
+    NavMeshAgent agent;
     public float moveSpeed = 10f;
     public float dps = 5;
     public float sightDist = 100;
@@ -23,8 +23,8 @@ public class ZombieController : MonoBehaviour, IEnemy
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         numEnemies++;
         InvokeRepeating("ZombieIdleSound", 2.0f, 10.0f);
@@ -39,30 +39,24 @@ public class ZombieController : MonoBehaviour, IEnemy
             playerSpotted = distance.magnitude < sightDist;
             if (playerSpotted) {
                 animator.SetTrigger("PlayerSpotted");
-                Vector3 horzPos = player.position;
-                horzPos.y = transform.position.y;
-                transform.LookAt(horzPos);
 
-                Vector3 moveVector = distance;
-                moveVector.y = 0;
-                moveVector = moveVector.normalized * moveSpeed;
-                controller.Move(moveVector * Time.deltaTime);
+                // Vector3 horzPos = player.position;
+                // horzPos.y = transform.position.y;
+                // transform.LookAt(horzPos);
+
+                // Vector3 moveVector = distance;
+                // moveVector.y = 0;
+                // moveVector = moveVector.normalized * moveSpeed;
+                // controller.Move(moveVector * Time.deltaTime);
+                agent.SetDestination(player.position);
             } else {
                 animator.SetTrigger("PlayerUnspotted");
+                agent.ResetPath();
             }
         }
-        Vector3 velocity = Vector3.zero;
-        // Apply gravity
-        if (!controller.isGrounded)
-        {
-            velocity.y -= gravity * Time.deltaTime;
+        else {
+            agent.ResetPath();
         }
-        else
-        {
-            velocity.y = 0; // Reset the fall velocity when grounded
-        }
-
-        controller.Move(velocity * Time.deltaTime);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit) {
