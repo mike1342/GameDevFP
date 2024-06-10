@@ -6,28 +6,25 @@ public class PickUpAmmo : MonoBehaviour
 {
     public AudioClip pickupSFX;
 
+    public float pickupDistance = 1.0f; 
+
+    public GameObject player;
+
     void Start()
     {
-        
+        GameObject player = GameObject.FindGameObjectWithTag("Player");     
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
+        if (Vector3.Distance(transform.position, player.transform.position) <= pickupDistance)
         {
-            gameObject.SetActive(false);
+            var gun = player.GetComponentInChildren<Gun>();
+            gun.AmmoPickUp();
             AudioSource.PlayClipAtPoint(pickupSFX, transform.position);
-
-            var unusedAmmo = other.GetComponent<Gun>();
-            unusedAmmo.AmmoPickUp();
-
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject);
         }
     }
+
 }

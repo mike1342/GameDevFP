@@ -36,6 +36,9 @@ public class Gun : MonoBehaviour
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
+
+        currAmmoText.text = gunData.currentAmmo.ToString();
+        unusedAmmoText.text = gunData.unusedAmmo.ToString();
     }
 
     private bool CanShoot()
@@ -100,5 +103,7 @@ public class Gun : MonoBehaviour
     public void AmmoPickUp()
     {
         gunData.unusedAmmo += (gunData.magSize + (gunData.magSize)/2);
+
+        Debug.Log("Ammo Increased");
     }
 }
