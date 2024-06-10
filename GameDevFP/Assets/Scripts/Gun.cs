@@ -15,14 +15,22 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        PlayerShooting.shootAction += Shoot;
-        PlayerShooting.reloadAction += StartReload;
-
         currAmmoText.text = gunData.currentAmmo.ToString();
         unusedAmmoText.text = gunData.unusedAmmo.ToString();
 
         //FIND A BETTER WAY TO DO THiS
         gunData.unusedAmmo = 150;
+        gunData.isReloading = false;
+    }
+
+    private void OnEnable() {
+        PlayerShooting.shootAction += Shoot;
+        PlayerShooting.reloadAction += StartReload;
+    }
+
+    private void OnDisable() {
+        PlayerShooting.shootAction -= Shoot;
+        PlayerShooting.reloadAction -= StartReload;
     }
 
     private void Update()
