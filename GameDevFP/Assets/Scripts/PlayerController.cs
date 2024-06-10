@@ -8,13 +8,19 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 1f;
     public float gravity = 9.81f;
     public float airControl = 10f;
+    public AudioClip walkingSFX;
 
     CharacterController controller;
     Vector3 input, moveDirection;
+    private bool isMoving;
+    public AudioSource walkingSource;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        isMoving = false;
+        walkingSource = GetComponent<AudioSource>();
+        walkingSource.volume = 0;
     }
 
     // Update is called once per frame
@@ -25,6 +31,23 @@ public class PlayerController : MonoBehaviour
 
         input = transform.right * moveHorizontal + transform.forward * moveVertical;
         input.Normalize();
+
+
+
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||
+        Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+        {
+            if(!isMoving){
+                isMoving = true;
+                walkingSource.volume = 1;
+            }
+        }
+        else
+        {
+            isMoving = false;
+            walkingSource.volume = 0;
+        }
+        
 
         if (controller.isGrounded)
         {
