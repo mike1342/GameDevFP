@@ -11,6 +11,19 @@ public class PlayerShooting : MonoBehaviour
     public static Action reloadAction;
     public static Action releaseAction;
 
+    Camera playerCamera;
+    public float scopedFOV = 30f;
+    float defaultFOV;
+    public float zoomDuration = 0.5f;
+
+    private Coroutine zoomCoroutine;
+
+    private void Start()
+    {
+        playerCamera = gameObject.GetComponent<Camera>();
+        defaultFOV = playerCamera.fieldOfView;
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -31,6 +44,40 @@ public class PlayerShooting : MonoBehaviour
         {
             reloadAction?.Invoke();
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (zoomCoroutine == null)
+            {
+                zoomCoroutine = StartCoroutine(ZoomCoroutine(scopedFOV));
+            }
+        }
+
+        if (Input.GetButtonUp("Fire2"))
+        {
+            if (zoomCoroutine != null)
+            {
+                StopCoroutine(zoomCoroutine);
+                zoomCoroutine = null;
+            }
+
+            StartCoroutine(ZoomCoroutine(defaultFOV));
+        }
+    }
+
+    IEnumerator ZoomCoroutine(float targetFOV)
+    {
+        float initialFOV = playerCamera.fieldOfView;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < zoomDuration)
+        {
+            playerCamera.fieldOfView = Mathf.Lerp(initialFOV, targetFOV, elapsedTime / zoomDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        playerCamera.fieldOfView = targetFOV;
     }
 
 
