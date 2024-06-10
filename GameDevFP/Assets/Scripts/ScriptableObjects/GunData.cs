@@ -5,8 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName="Gun", menuName="Weapon/Gun")]
 public class GunData : ScriptableObject
 {
-    public new string name;
 
+    public enum GunType {
+        Manual,
+        SemiAuto,
+        Auto
+    }
+
+    public new string name;
+    public GunType gunType;
     public float damage;
     public float maxDistance;
 

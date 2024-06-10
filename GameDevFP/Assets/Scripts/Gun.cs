@@ -13,6 +13,9 @@ public class Gun : MonoBehaviour
 
     float timeSinceLastShot = 0f;
 
+    bool canShootSemi = true;
+    int semiShotCount = 0;
+
     private void Start()
     {
         currAmmoText.text = gunData.currentAmmo.ToString();
@@ -26,11 +29,13 @@ public class Gun : MonoBehaviour
     private void OnEnable() {
         PlayerShooting.shootAction += Shoot;
         PlayerShooting.reloadAction += StartReload;
+        PlayerShooting.releaseAction += ReleaseFire;
     }
 
     private void OnDisable() {
         PlayerShooting.shootAction -= Shoot;
         PlayerShooting.reloadAction -= StartReload;
+        PlayerShooting.releaseAction -= ReleaseFire;
     }
 
     private void Update()
@@ -55,6 +60,12 @@ public class Gun : MonoBehaviour
         }
     }
 
+    public void ReleaseFire()
+    {
+        canShootSemi = true;
+        semiShotCount = 0;
+    }
+
     private IEnumerator Reload()
     {
         Debug.Log("Reloading");
@@ -75,24 +86,52 @@ public class Gun : MonoBehaviour
         Debug.Log("Finished");
     }
 
-    public void Shoot()
+    public void Shoot(bool isManual)
     {
         if (gunData.currentAmmo > 0)
         {
-            if (CanShoot())
+            switch (gunData.gunType) 
             {
-                if (Physics.Raycast(muzzle.position, transform.forward, out RaycastHit hitInfo, gunData.maxDistance))
-                {
-                    IEnemy enemy = hitInfo.transform.GetComponent<IEnemy>();
-                    enemy?.Damage(gunData.damage);
-                }
-                AudioSource.PlayClipAtPoint(gunData.fireClip, Camera.main.transform.position);
-                gunData.currentAmmo--;
-                currAmmoText.text = gunData.currentAmmo.ToString();
-                timeSinceLastShot = 0f;
-                GunShot();
+                case GunData.GunType.Manual:
+                    if (CanShoot() && isManual)
+                    {
+                        FireBullet();
+                    }
+                    break;
+                case GunData.GunType.SemiAuto:
+                    if (CanShoot() && canShootSemi)
+                    {
+                        FireBullet();
+                        semiShotCount++;
+                        if (semiShotCount >= 3)
+                        {
+                            canShootSemi = false;
+                        }
+                    }
+                    break;
+                case GunData.GunType.Auto:
+                    if (CanShoot())
+                    {
+                        FireBullet();
+                    }
+                    break;
             }
+            
         }
+    }
+
+    private void FireBullet() 
+    {
+        if (Physics.Raycast(muzzle.position, transform.forward, out RaycastHit hitInfo, gunData.maxDistance))
+        {
+            IEnemy enemy = hitInfo.transform.GetComponent<IEnemy>();
+            enemy?.Damage(gunData.damage);
+        }
+        AudioSource.PlayClipAtPoint(gunData.fireClip, Camera.main.transform.position);
+        gunData.currentAmmo--;
+        currAmmoText.text = gunData.currentAmmo.ToString();
+        timeSinceLastShot = 0f;
+        GunShot();
     }
 
     private void GunShot()

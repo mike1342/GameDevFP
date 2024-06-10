@@ -6,14 +6,25 @@ using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public static Action shootAction;
+    public delegate void ShootDelegate(bool isManual);
+    public static event ShootDelegate shootAction;
     public static Action reloadAction;
+    public static Action releaseAction;
 
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            shootAction?.Invoke();
+            shootAction?.Invoke(true);
+        }
+
+        if (Input.GetButton("Fire1")) {
+            shootAction?.Invoke(false);
+        }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            releaseAction?.Invoke();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
