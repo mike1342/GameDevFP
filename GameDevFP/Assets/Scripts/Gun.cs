@@ -23,6 +23,7 @@ public class Gun : MonoBehaviour
 
     
         gunData.unusedAmmo = gunData.magSize * 4;
+        gunData.currentAmmo = gunData.magSize;
         gunData.isReloading = false;
     }
 
