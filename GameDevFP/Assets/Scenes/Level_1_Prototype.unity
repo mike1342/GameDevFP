@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.015395615, g: 0.009356134, b: 0.014377055, a: 1}
+  m_IndirectSpecularColor: {r: 0.015354847, g: 0.009367071, b: 0.014355555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -556,8 +556,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: timeBetweenSpawns
@@ -4772,7 +4776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efa44bf3b1d54bd2a472492f1093cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 
+  nextScene: Level_2_Prototype
 --- !u!4 &602139696
 Transform:
   m_ObjectHideFlags: 0
@@ -5684,6 +5688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.392849
@@ -6404,6 +6412,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.39
@@ -6832,6 +6844,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.918972
@@ -16545,7 +16561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: timeBetweenSpawns
@@ -19210,6 +19226,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.02023
@@ -19840,6 +19860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.12586
@@ -20752,6 +20776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2375115812395414660, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+      propertyPath: walkingSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: d8571aaafb2431a41b5addb88f62ba5c, type: 3}
     - target: {fileID: 2706649142905291190, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: m_ClearFlags
       value: 1
