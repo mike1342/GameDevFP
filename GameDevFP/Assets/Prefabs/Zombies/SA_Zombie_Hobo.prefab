@@ -2440,9 +2440,11 @@ MonoBehaviour:
   moveSpeed: 8
   dps: 5
   sightDist: 50
+  attackDist: 3
   gravity: 9.81
   zombieHurt: {fileID: 8300000, guid: b79baf94e750840c4a8674be0fd99b53, type: 3}
   zombieIdle: {fileID: 8300000, guid: e2d2cbc1712124b5a9fbd135af73c728, type: 3}
+  currState: 0
 --- !u!195 &5686918975698625473
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -75,6 +75,8 @@ MonoBehaviour:
   jumpHeight: 1
   gravity: 9.81
   airControl: 10
+  walkingSFX: {fileID: 8300000, guid: d8571aaafb2431a41b5addb88f62ba5c, type: 3}
+  walkingSource: {fileID: 0}
 --- !u!143 &8242551314888797243
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1075,6 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd20483c42992457a9a05305a84137de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scopedFOV: 30
+  zoomDuration: 0.5
 --- !u!1 &6964493576065534694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunData: {fileID: 11400000, guid: 290b2843fc56c4b0389ebe77361755ac, type: 2}
   muzzle: {fileID: 301002604876534975}
+  currAmmoText: {fileID: 0}
+  unusedAmmoText: {fileID: 0}
 --- !u!1 &7834215652839000468
 GameObject:
   m_ObjectHideFlags: 0
