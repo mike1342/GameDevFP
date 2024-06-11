@@ -25,7 +25,7 @@ public class ZombieController : MonoBehaviour, IEnemy
         Idle, Wander, Chase, Attack, Dead
     }
     public FSMStates currState;
-
+    Vector3 currWanderPos;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +36,8 @@ public class ZombieController : MonoBehaviour, IEnemy
             player = GameObject.FindGameObjectWithTag("Player");
         }
         numEnemies++;
-        currState = FSMStates.Idle;
+        currState = FSMStates.Wander;
+        currWanderPos = getNewWanderPos();
         InvokeRepeating("ZombieIdleSound", 2.0f, 10.0f);
     }
 
@@ -46,7 +47,7 @@ public class ZombieController : MonoBehaviour, IEnemy
                 UpdateIdleState();
                 break;
             case FSMStates.Wander:
-                UpdateIdleState();
+                UpdateWanderState();
                 break;
             case FSMStates.Chase:
                 UpdateChaseState();
@@ -77,7 +78,23 @@ public class ZombieController : MonoBehaviour, IEnemy
     }
 
     void UpdateWanderState() {
-        
+        agent.ResetPath();
+        agent.stoppingDistance = 0;
+        animator.SetTrigger("PlayerSpotted");
+        Vector3 playerVelocity = player.GetComponent<CharacterController>().velocity;
+        if (playerVelocity.magnitude > 0.001) {
+            Vector3 distance = player.transform.position - transform.position;
+            if (distance.magnitude < sightDist) {
+                currState = FSMStates.Chase;
+            } else {
+                Vector3 wanderDistance = currWanderPos - transform.position;
+                if (wanderDistance.magnitude == 0) {
+                    currWanderPos = getNewWanderPos();
+                } else {
+                    agent.SetDestination(currWanderPos);
+                }
+            }
+        }
     }
 
     void UpdateChaseState() {
@@ -90,7 +107,8 @@ public class ZombieController : MonoBehaviour, IEnemy
             if (distance.magnitude < attackDist) {
                 currState = FSMStates.Attack;
             } else if (distance.magnitude > sightDist) {
-                currState = FSMStates.Idle;
+                currWanderPos = getNewWanderPos();
+                currState = FSMStates.Wander;
             } else {
                 agent.SetDestination(player.transform.position);
             }
@@ -101,7 +119,8 @@ public class ZombieController : MonoBehaviour, IEnemy
         agent.ResetPath();
         Vector3 distance = player.transform.position - transform.position;
         if (distance.magnitude > sightDist) {
-            currState = FSMStates.Idle;
+            currWanderPos = getNewWanderPos();
+            currState = FSMStates.Wander;
         } else if (distance.magnitude > attackDist) {
             currState = FSMStates.Chase;
         } else {
@@ -136,5 +155,13 @@ public class ZombieController : MonoBehaviour, IEnemy
 
     private void ZombieIdleSound() {
         AudioSource.PlayClipAtPoint(zombieIdle, transform.position);
+    }
+
+    private Vector3 getNewWanderPos() {
+        Vector3 randomDirection = Random.insideUnitSphere * moveSpeed + transform.position;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, moveSpeed, 1);
+        return hit.position;
+
     }
 }

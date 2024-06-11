@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   dps: 5
-  sightDist: 50
+  sightDist: 20
   attackDist: 3
   gravity: 9.81
   zombieHurt: {fileID: 8300000, guid: b79baf94e750840c4a8674be0fd99b53, type: 3}

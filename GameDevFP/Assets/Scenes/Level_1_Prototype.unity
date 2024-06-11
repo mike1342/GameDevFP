@@ -556,8 +556,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: timeBetweenSpawns
@@ -16557,7 +16561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: timeBetweenSpawns
