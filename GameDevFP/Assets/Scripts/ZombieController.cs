@@ -8,9 +8,11 @@ public class ZombieController : MonoBehaviour, IEnemy
     Animator animator;
     GameObject player;
     NavMeshAgent agent;
+    public Transform eyes;
     public float moveSpeed = 10f;
     public float dps = 5;
     public float sightDist = 25;
+    public float FOV = 120;
     public float attackDist = 1.0f;
     public float gravity = 9.81f;
     public AudioClip zombieHurt;
@@ -84,7 +86,7 @@ public class ZombieController : MonoBehaviour, IEnemy
         Vector3 playerVelocity = player.GetComponent<CharacterController>().velocity;
         if (playerVelocity.magnitude > 0.001) {
             Vector3 distance = player.transform.position - transform.position;
-            if (distance.magnitude < sightDist) {
+            if (distance.magnitude < sightDist && IsPlayerInClearFOV()) {
                 currState = FSMStates.Chase;
             } else {
                 Vector3 wanderDistance = currWanderPos - transform.position;
@@ -163,5 +165,18 @@ public class ZombieController : MonoBehaviour, IEnemy
         NavMesh.SamplePosition(randomDirection, out hit, moveSpeed, 1);
         return hit.position;
 
+    }
+
+    bool IsPlayerInClearFOV() {
+        RaycastHit hit;
+        Vector3 directionToPlayer = player.transform.position - eyes.position;
+        if (Vector3.Angle(directionToPlayer, eyes.forward) <= FOV) {
+            if (Physics.Raycast(eyes.position, directionToPlayer, out hit, sightDist)) {
+                if (hit.collider.CompareTag("Player")) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
