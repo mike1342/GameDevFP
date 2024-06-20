@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float startingHealth = 100;
+    public Slider healthSlider;
     float currentHealth;
     bool isInvulnerable = false;
 
@@ -12,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = startingHealth;
+        healthSlider.value = currentHealth;
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damageAmount) {
         if(currentHealth > 0 && !isInvulnerable) {
             currentHealth -= damageAmount;
+            healthSlider.value = currentHealth;
             isInvulnerable = true;
             Invoke("removeInvulnerability", 0.2f);
         }
