@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 8242551314888797243}
   - component: {fileID: 61358163761991426}
   - component: {fileID: -7513768747286149605}
+  - component: {fileID: 8658876374641658508}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -339,6 +340,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8658876374641658508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948511461373116824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804507be12aafd247a283e950de35b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSenseSlider: {fileID: 0}
 --- !u!1 &1948511461373119206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08546c2fb3ef1446a8ccda8cb536d467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 500
 --- !u!114 &1607845370662163617
 MonoBehaviour:
   m_ObjectHideFlags: 0
