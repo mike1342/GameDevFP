@@ -12,7 +12,7 @@ public class PickUpAmmo : MonoBehaviour
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");     
+        player = GameObject.FindGameObjectWithTag("Player");     
     }
 
     // Update is called once per frame
