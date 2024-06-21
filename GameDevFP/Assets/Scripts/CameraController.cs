@@ -6,12 +6,13 @@ public class MouseLook : MonoBehaviour
 {
     Transform playerBody;
 
-    public float mouseSensitivity = 2000f;
+    public static float mouseSensitivity;
 
     float pitch = 0;
 
     void Start()
     {
+        mouseSensitivity = MouseSenseController.playerMouseSensitivity;
         playerBody = transform.parent.transform;
 
         Cursor.visible = false;

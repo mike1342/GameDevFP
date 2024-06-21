@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public static bool isGameOver = false;
     public string nextScene;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void LevelLost() {
@@ -38,6 +39,17 @@ public class LevelManager : MonoBehaviour
     }
 
     void LoadNextLevel() {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            if (MouseSenseController.playerMouseSensitivity == 0)
+            {
+                MouseLook.mouseSensitivity = 10;
+            }
+            else
+            {
+                MouseLook.mouseSensitivity = MouseSenseController.playerMouseSensitivity;
+            }
+        }
         if(string.IsNullOrEmpty(nextScene)) {
             LoadCurrLevel();
         } else {
