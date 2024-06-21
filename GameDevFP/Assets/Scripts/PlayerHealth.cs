@@ -36,6 +36,15 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Health: " + currentHealth);
     }
 
+        public void TakeHealing(int healthAmount) {
+        if(currentHealth < 100) {
+            currentHealth += healthAmount;
+            currentHealth = Mathf.Clamp(currentHealth, 0, 100);
+            healthSlider.value = currentHealth;
+        }
+        Debug.Log("Health: " + currentHealth);
+    }
+
     void PlayerDies() {
         Debug.Log("Player is dead.");
         GameObject.FindObjectOfType<LevelManager>().LevelLost();
