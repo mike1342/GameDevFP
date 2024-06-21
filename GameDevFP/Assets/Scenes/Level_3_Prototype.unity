@@ -4525,6 +4525,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01
@@ -8156,6 +8160,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (2)
@@ -8240,6 +8248,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (5)
@@ -30438,6 +30450,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (4)
@@ -30988,6 +31004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (3)
@@ -31925,6 +31945,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873489146}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (1)
