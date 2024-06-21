@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpHeight = 1f;
+    public float speed = 4f;
+    public float jumpHeight = 3f;
     public float gravity = 9.81f;
     public float airControl = 10f;
     public AudioClip walkingSFX;
