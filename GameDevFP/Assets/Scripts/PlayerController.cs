@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 5f;
     public float jumpHeight = 1f;
     public float gravity = 9.81f;
     public float airControl = 10f;
@@ -64,10 +64,10 @@ public class PlayerController : MonoBehaviour
         else
         {
             input.y = moveDirection.y;
-            moveDirection = Vector3.Lerp(moveDirection, input, airControl * Time.deltaTime);
+            moveDirection = Vector3.Lerp(moveDirection, input, airControl * Time.fixedDeltaTime);
         }
 
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * speed * Time.deltaTime);
+        moveDirection.y -= gravity * Time.fixedDeltaTime;
+        controller.Move(moveDirection * speed * Time.fixedDeltaTime);
     }
 }

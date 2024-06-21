@@ -17,11 +17,13 @@ public class PlayerShooting : MonoBehaviour
     public float zoomDuration = 0.5f;
 
     private Coroutine zoomCoroutine;
+    private TimeController timeController;
 
     private void Start()
     {
         playerCamera = gameObject.GetComponent<Camera>();
         defaultFOV = playerCamera.fieldOfView;
+        timeController = FindAnyObjectByType<TimeController>();
     }
 
     private void Update()
@@ -29,6 +31,7 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             shootAction?.Invoke(true);
+            timeController.Shoot();
         }
 
         if (Input.GetButton("Fire1")) {
@@ -79,33 +82,4 @@ public class PlayerShooting : MonoBehaviour
 
         playerCamera.fieldOfView = targetFOV;
     }
-
-
-    //public GameObject projectilePrefab;
-    //public float projectileSpeed = 100f;
-
-
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetButtonDown("Fire1"))
-    //    {
-    //        GameObject projectile = Instantiate(projectilePrefab,
-    //            transform.position + transform.forward, Quaternion.LookRotation(transform.forward)) as GameObject;
-
-    //        projectile.transform.SetParent(
-    //            GameObject.FindGameObjectWithTag("Bullets").transform);
-
-    //        Rigidbody rb = projectile.GetComponent<Rigidbody>();
-
-    //        rb.AddForce(transform.forward * projectileSpeed, ForceMode.VelocityChange);
-    //    }
-    //}
 }

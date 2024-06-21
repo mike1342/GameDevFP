@@ -18417,6 +18417,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 448440, guid: ca30a7bf93989ab45908d7349a74af2a, type: 3}
   m_PrefabInstance: {fileID: 1447759540}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1544212602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1544212604}
+  - component: {fileID: 1544212603}
+  m_Layer: 0
+  m_Name: TimeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1544212603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544212602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d24675b3bbf345f695594e2d0d91428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScaleAccelerationSpeed: 1
+--- !u!4 &1544212604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544212602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -49.266987, y: 14.389068, z: -198.89574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1544264672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21109,6 +21154,14 @@ PrefabInstance:
     - target: {fileID: 1948511461373116824, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375115812395414660, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375115812395414660, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+      propertyPath: jumpHeight
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2375115812395414660, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: walkingSFX
@@ -24648,3 +24701,4 @@ SceneRoots:
   - {fileID: 1746393546}
   - {fileID: 738261876}
   - {fileID: 836521419}
+  - {fileID: 1544212604}

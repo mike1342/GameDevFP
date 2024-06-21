@@ -69,13 +69,10 @@ public class ZombieController : MonoBehaviour, IEnemy
     void UpdateIdleState() {
         agent.ResetPath();
         animator.SetTrigger("PlayerUnspotted");
-        Vector3 playerVelocity = player.GetComponent<CharacterController>().velocity;
-        if (playerVelocity.magnitude > 0.001) {
-            Vector3 distance = player.transform.position - transform.position;
-            playerSpotted = distance.magnitude < sightDist;
-            if (playerSpotted) {
-                currState = FSMStates.Chase;
-            }
+        Vector3 distance = player.transform.position - transform.position;
+        playerSpotted = distance.magnitude < sightDist;
+        if (playerSpotted) {
+            currState = FSMStates.Chase;
         }
     }
 
@@ -83,18 +80,15 @@ public class ZombieController : MonoBehaviour, IEnemy
         agent.ResetPath();
         agent.stoppingDistance = 0;
         animator.SetTrigger("PlayerSpotted");
-        Vector3 playerVelocity = player.GetComponent<CharacterController>().velocity;
-        if (playerVelocity.magnitude > 0.001) {
-            Vector3 distance = player.transform.position - transform.position;
-            if (distance.magnitude < sightDist && IsPlayerInClearFOV()) {
-                currState = FSMStates.Chase;
+        Vector3 distance = player.transform.position - transform.position;
+        if (distance.magnitude < sightDist && IsPlayerInClearFOV()) {
+            currState = FSMStates.Chase;
+        } else {
+            Vector3 wanderDistance = currWanderPos - transform.position;
+            if (wanderDistance.magnitude == 0) {
+                currWanderPos = getNewWanderPos();
             } else {
-                Vector3 wanderDistance = currWanderPos - transform.position;
-                if (wanderDistance.magnitude == 0) {
-                    currWanderPos = getNewWanderPos();
-                } else {
-                    agent.SetDestination(currWanderPos);
-                }
+                agent.SetDestination(currWanderPos);
             }
         }
     }
@@ -103,18 +97,16 @@ public class ZombieController : MonoBehaviour, IEnemy
         agent.ResetPath();
         agent.stoppingDistance = attackDist;
         animator.SetTrigger("PlayerSpotted");
-        Vector3 playerVelocity = player.GetComponent<CharacterController>().velocity;
-        if (playerVelocity.magnitude > 0.001) {
-            Vector3 distance = player.transform.position - transform.position;
-            if (distance.magnitude < attackDist) {
-                currState = FSMStates.Attack;
-            } else if (distance.magnitude > sightDist) {
-                currWanderPos = getNewWanderPos();
-                currState = FSMStates.Wander;
-            } else {
-                agent.SetDestination(player.transform.position);
-            }
+        Vector3 distance = player.transform.position - transform.position;
+        if (distance.magnitude < attackDist) {
+            currState = FSMStates.Attack;
+        } else if (distance.magnitude > sightDist) {
+            currWanderPos = getNewWanderPos();
+            currState = FSMStates.Wander;
+        } else {
+            agent.SetDestination(player.transform.position);
         }
+
     }
 
     void UpdateAttackState() {
