@@ -11,8 +11,8 @@ public class ZombieController : MonoBehaviour, IEnemy
     public Transform eyes;
     public float moveSpeed = 10f;
     public float dps = 5;
-    public float sightDist = 25;
-    public float FOV = 120;
+    public float sightDist = 100;
+    public float FOV = 180;
     public float attackDist = 1.0f;
     public float gravity = 9.81f;
     public AudioClip zombieHurt;
