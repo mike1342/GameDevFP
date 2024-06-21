@@ -8184,11 +8184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2375115812395414660, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: speed
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2375115812395414660, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: jumpHeight
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2706649142905291190, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: m_ClearFlags
