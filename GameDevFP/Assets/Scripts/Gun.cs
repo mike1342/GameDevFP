@@ -18,8 +18,6 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(gunData);
-
         currAmmoText.text = gunData.currentAmmo.ToString();
         unusedAmmoText.text = gunData.unusedAmmo.ToString();
 

@@ -14,7 +14,7 @@ public class ZombieSpawner : MonoBehaviour
     public float xMin = -20;
     public float xMax = 20;
     public float yMin = 5;
-    public float yMax = 20;
+    public float yMax = 6;
     public float zMin = -20;
     public float zMax = 20;
 
