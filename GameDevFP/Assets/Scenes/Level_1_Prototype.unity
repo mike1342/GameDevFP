@@ -21187,6 +21187,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 6964493576065534694, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7241321091325024042, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: gunData
       value: 
@@ -21202,6 +21206,10 @@ PrefabInstance:
     - target: {fileID: 8242551314888797243, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       propertyPath: m_Radius
       value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290338056936716551, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
