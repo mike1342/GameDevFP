@@ -1090,8 +1090,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: fb6728d0fff48d640a22014cda7ed717, type: 3}
-<<<<<<< HEAD
-=======
 --- !u!1 &510344571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1223,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510344571}
   m_CullTransparentMesh: 1
->>>>>>> 06e71da3037297ff95eb2876e86b3367759eec83
 --- !u!1 &527054408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 143436, guid: ca30a7bf93989ab45908d7349a74af2a, type: 3}
@@ -7774,8 +7771,6 @@ Transform:
   - {fileID: 1841172318}
   m_Father: {fileID: 1376891030}
   m_LocalEulerAnglesHint: {x: 0, y: 87.5, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &899905159
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,7 +7916,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899905159}
   m_CullTransparentMesh: 1
->>>>>>> 06e71da3037297ff95eb2876e86b3367759eec83
 --- !u!4 &924834871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5fd56ab108b33e841b5546bcd3871ee5, type: 3}
@@ -10655,8 +10649,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018558542}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &2076351989
 GameObject:
   m_ObjectHideFlags: 0
@@ -10790,7 +10782,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076351989}
   m_CullTransparentMesh: 1
->>>>>>> 06e71da3037297ff95eb2876e86b3367759eec83
 --- !u!1 &2091668218
 GameObject:
   m_ObjectHideFlags: 0
