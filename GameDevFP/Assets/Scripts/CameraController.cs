@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseLook : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     Transform playerBody;
 
@@ -17,6 +17,11 @@ public class MouseLook : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (mouseSensitivity < 1)
+        {
+            mouseSensitivity = 1000;
+        }
     }
 
     // Update is called once per frame

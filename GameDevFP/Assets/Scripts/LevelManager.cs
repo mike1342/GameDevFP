@@ -43,11 +43,11 @@ public class LevelManager : MonoBehaviour
         {
             if (MouseSenseController.playerMouseSensitivity == 0)
             {
-                MouseLook.mouseSensitivity = 10;
+                CameraController.mouseSensitivity = 10;
             }
             else
             {
-                MouseLook.mouseSensitivity = MouseSenseController.playerMouseSensitivity;
+                CameraController.mouseSensitivity = MouseSenseController.playerMouseSensitivity;
             }
         }
         if(string.IsNullOrEmpty(nextScene)) {

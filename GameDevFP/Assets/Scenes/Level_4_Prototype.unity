@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009001303, g: 0.013093587, b: 0.02049944, a: 1}
+  m_IndirectSpecularColor: {r: 0.008843006, g: 0.012999771, b: 0.020170813, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7851,24 +7851,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 487096, guid: b307a3e7dc3e3ec409ff68b9cb1080ed, type: 3}
   m_PrefabInstance: {fileID: 805259056}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &817917672 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1948511461373116824, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
-  m_PrefabInstance: {fileID: 1287143558}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &817917679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817917672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 804507be12aafd247a283e950de35b84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSenseSlider: {fileID: 0}
 --- !u!1001 &822194741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19819,12 +19801,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1176479503}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1948511461373116824, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 817917679}
     - targetCorrespondingSourceObject: {fileID: 6807711476160284025, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1813009638}
+    - targetCorrespondingSourceObject: {fileID: 6807711476160284025, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1813009643}
   m_SourcePrefab: {fileID: 100100000, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
 --- !u!1 &1299943716
 GameObject:
@@ -22500,6 +22482,18 @@ Skybox:
   m_GameObject: {fileID: 1813009632}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!114 &1813009643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813009632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08546c2fb3ef1446a8ccda8cb536d467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1819895212
 PrefabInstance:
   m_ObjectHideFlags: 0
