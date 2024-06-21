@@ -792,6 +792,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -817,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.52
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4110,7 +4114,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 60003215bc152b24faa189318baacb00, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1 &534297382
 GameObject:
@@ -6160,6 +6164,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -6185,7 +6197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.39
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6429,7 +6441,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 05aa94dd2174e2a47b307cae5d3a3141, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1 &814292235
 GameObject:
@@ -6682,6 +6694,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -6707,7 +6723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.53
+      value: -3.72
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10401,7 +10417,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 30db9c439583ffe499ed2d0f4b2f2246, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1 &1254844067
 GameObject:
@@ -11194,7 +11210,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 6dee725e95aa94240b45bed9a91b8c08, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1 &1384880409
 GameObject:
@@ -11669,6 +11685,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -11694,7 +11714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.49
+      value: -3.538
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12280,6 +12300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2108077103}
     m_Modifications:
+    - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1670103051}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 644.68
@@ -13089,6 +13113,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -13114,7 +13142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -4.55
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13596,7 +13624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efa44bf3b1d54bd2a472492f1093cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 
+  nextScene: Level_3_Prototype
 --- !u!4 &1591818845
 Transform:
   m_ObjectHideFlags: 0
@@ -14451,6 +14479,11 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.436931, y: 0.0000017285347, z: 0.0016335845}
     m_Extent: {x: 1.4821485, y: 1.6845057, z: 0.35555047}
   m_DirtyAABB: 0
+--- !u!1 &1670103051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1948511461373116824, guid: 9a7268108ea2f4bec9c2a52df673d061, type: 3}
+  m_PrefabInstance: {fileID: 1002478593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1671144206
 GameObject:
   m_ObjectHideFlags: 0
@@ -16560,6 +16593,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -16585,7 +16622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.28
+      value: -3.984
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16678,6 +16715,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 5
       objectReference: {fileID: 0}
@@ -16703,7 +16748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9
+      value: -3.86
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18455,7 +18500,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 82352764f01a97345be8c10a7bbb63e0, type: 2}
+  m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

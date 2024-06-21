@@ -5039,7 +5039,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 999bb6ff47d544dd2bc47dcaeba45c93, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1e4115b00e44a46479437c2ce0c76a90, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &648571689 stripped
 GameObject:
@@ -16714,6 +16714,10 @@ PrefabInstance:
     - target: {fileID: 389867970113262154, guid: ea9e62f21402d4ebbbccdce4789dd0d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
