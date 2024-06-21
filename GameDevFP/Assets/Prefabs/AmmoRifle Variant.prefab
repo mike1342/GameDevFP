@@ -183,6 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSFX: {fileID: 8300000, guid: fde041537c15c4b4bb5855ab3411dd74, type: 3}
+  pickupDistance: 1
+  player: {fileID: 0}
 --- !u!65 &2466500156696068222
 BoxCollider:
   m_ObjectHideFlags: 0
