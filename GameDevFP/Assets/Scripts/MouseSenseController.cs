@@ -11,12 +11,12 @@ public class MouseSenseController : MonoBehaviour
 
     void Start()
     {
-        playerMouseSensitivity = 50;
+        playerMouseSensitivity = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerMouseSensitivity = mouseSenseSlider.value;
+        playerMouseSensitivity = mouseSenseSlider != null ? mouseSenseSlider.value : 0;
     }
 }
