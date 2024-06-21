@@ -78,14 +78,14 @@ public class ZombieController : MonoBehaviour, IEnemy
 
     void UpdateWanderState() {
         agent.ResetPath();
-        agent.stoppingDistance = 0;
+        agent.stoppingDistance = 2.5f;
         animator.SetTrigger("PlayerSpotted");
         Vector3 distance = player.transform.position - transform.position;
         if (distance.magnitude < sightDist && IsPlayerInClearFOV()) {
             currState = FSMStates.Chase;
         } else {
             Vector3 wanderDistance = currWanderPos - transform.position;
-            if (wanderDistance.magnitude == 0) {
+            if (wanderDistance.magnitude <= agent.stoppingDistance) {
                 currWanderPos = getNewWanderPos();
             } else {
                 agent.SetDestination(currWanderPos);
