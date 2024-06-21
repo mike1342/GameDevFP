@@ -63,8 +63,6 @@ public class TimeController : MonoBehaviour
             {
                 // Slow down time
                 Time.timeScale = Mathf.MoveTowards(Time.timeScale, 0.05f, timeScaleAccelerationSpeed * Time.unscaledDeltaTime);
-                Debug.Log("scale: " + Time.timeScale);
-                Debug.Log("unscaled: " + Time.unscaledDeltaTime);
                 // Smoothing the TimeScale
                 Time.fixedDeltaTime = 0.02f * Time.timeScale;
             }
