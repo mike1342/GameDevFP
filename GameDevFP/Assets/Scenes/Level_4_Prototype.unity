@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.008843006, g: 0.012999771, b: 0.020170813, a: 1}
+  m_IndirectSpecularColor: {r: 0.009001303, g: 0.013093587, b: 0.02049944, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -768,7 +768,7 @@ PrefabInstance:
     - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.4
@@ -6052,7 +6052,7 @@ PrefabInstance:
     - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.9
@@ -7122,7 +7122,7 @@ PrefabInstance:
     - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.5
@@ -7939,7 +7939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7620572932697051855, guid: dcfd4baa88d397a4ea8a66689fb899ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -219.69318
+      value: 9.693294
       objectReference: {fileID: 0}
     - target: {fileID: 7620572932697051855, guid: dcfd4baa88d397a4ea8a66689fb899ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8097,7 +8097,7 @@ PrefabInstance:
     - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1
@@ -14531,7 +14531,7 @@ PrefabInstance:
     - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01
@@ -19762,7 +19762,7 @@ PrefabInstance:
     - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (1)
@@ -22525,6 +22525,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: xMax
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: xMin
+      value: -186.1432
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMax
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
+      propertyPath: yMin
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
       value: 10
       objectReference: {fileID: 0}
@@ -22772,19 +22788,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: xMax
-      value: 12
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: xMin
-      value: 0
+      value: -186.1432
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: yMax
-      value: 163
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: yMin
-      value: 157
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 4266457899998339463, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: numToSpawn
@@ -22812,7 +22828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 156.85
+      value: 156.5
       objectReference: {fileID: 0}
     - target: {fileID: 5676950783203187256, guid: 64359686f373b440386095077fd43c38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22932,7 +22948,7 @@ PrefabInstance:
     - target: {fileID: 7191482063605333266, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 8617766717910387943, guid: fd556b94bd0863d40acea45c2b4af218, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35.6
@@ -23082,7 +23098,7 @@ PrefabInstance:
     - target: {fileID: -2309789304895731026, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 817917672}
+      objectReference: {fileID: 0}
     - target: {fileID: 199508, guid: a4a36f473384c3c489b6458561ff07ac, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Burger_01 (2)
